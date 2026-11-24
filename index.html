@@ -1157,35 +1157,7 @@ python audit_ci_cd_security.py .github/workflows/</div>
           <div class="faq-body">
             Las etiquetas en Git son punteros mutables que pueden sobrescribirse sin notificación previa. Si la cuenta u organización desarrolladora es comprometida, el atacante puede alterar la etiqueta para distribuir código malicioso. La defensa estricta exige fijar las actions mediante su commit SHA inmutable de 40 caracteres.
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>¿Qué es la política de mínimo privilegio para tokens de automatización (GITHUB_TOKEN)?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
-            Históricamente, el token por defecto heredaba permisos globales de escritura (write-all). La política de mínimo privilegio impone declarar permissions: contents: read a nivel raíz del archivo, otorgando permisos adicionales únicamente a los trabajos que específicamente requieran publicar paquetes.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>¿Cómo evitar la inyección de comandos en bloques run: de GitHub Actions?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
-            Nunca interpole expresiones de contexto de GitHub (${ github.event.pull_request.title }) directamente dentro de scripts de shell. En su lugar, asigne el valor a variables de entorno (env:) y consúmalo como una variable de entorno estándar ($PR_TITLE), neutralizando delimitadores de comando.
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>¿Cómo auditar la seguridad de mis pipelines de CI/CD de forma determinística?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
-            Ejecute la herramienta oficial audit_ci_cd_security.py directamente en su terminal o entorno de CI/CD. El script realiza análisis estático determinístico sobre los archivos YAML, verificando permisos, fijación de actions y sanitización de variables sin enviar telemetría a servidores externos.
-          </div>
-        </div>
-      </div>
+        </div></div>
     </section>
 
     <div class="cta-card">
